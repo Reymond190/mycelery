@@ -8,7 +8,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celdj.settings')
 
 app = Celery('db1')
 
-app.config_from_object('django.conf:settings')
+app.config_from_object('django.conf:settings',namespace='CELERY')
 
 @app.task
 def see_you():
