@@ -2,7 +2,7 @@ import os
 from celery import Celery
 from app1.tasks import main_func
 
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celdj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celdj.settings')
 
 
 
