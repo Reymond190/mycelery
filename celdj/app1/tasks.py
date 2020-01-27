@@ -5,8 +5,8 @@ import binascii
 import struct
 import sys
 
-import django
-django.setup()
+# import django
+# django.setup()
 # from app1.models import book
 import pytz
 import libscrc
