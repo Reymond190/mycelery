@@ -19,7 +19,6 @@ def date_fun(value):
     hour = value[6:8]
     minute = value[8:10]
     second = value[10:12]
-
     year = int(year, 16)
     month = int(month, 16)
     day = int(day, 16)
