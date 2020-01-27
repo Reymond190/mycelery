@@ -6,7 +6,7 @@ import struct
 import sys
 
 
-from app1.models import book
+# from app1.models import book
 import pytz
 import libscrc
 import datetime
