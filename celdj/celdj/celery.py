@@ -1,6 +1,6 @@
 import os
 from celery import Celery
-
+from app1.tasks import main_func
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celdj.settings')
 
@@ -12,6 +12,7 @@ app.config_from_object('django.conf:settings')
 
 @app.task
 def see_you():
+    main_func()
     print("See you in ten seconds!")
 
 
