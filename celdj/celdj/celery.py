@@ -1,5 +1,6 @@
 import os
 from celery import Celery
+from django.conf import settings
 from app1.tasks import main_func
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celdj.settings')
@@ -25,9 +26,9 @@ def see_you():
 
 
 # Load task modules from all registered Django app configs.
-app.autodiscover_tasks(see_you)
+# app.autodiscover_tasks(see_you)
 
-
+app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 # def main():
 #     x = see_you.delay()
 #     print(x.get())
